@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/shoppingcar/shoppingcar",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E13838",
+    "navigationBarTitleText": "在线订货平台",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor":"#E13838",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-select.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "挑货",
+        "iconPath": "images/icons/list.png",
+        "selectedIconPath": "images/icons/list-select.png"
+      },
+      {
+        "pagePath": "pages/shoppingcar/shoppingcar",
+        "text": "购物车",
+        "iconPath": "images/icons/shoppingcar.png",
+        "selectedIconPath": "images/icons/shoppingcar-select.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/icons/order.png",
+        "selectedIconPath": "images/icons/order-select.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/icons/me.png",
+        "selectedIconPath": "images/icons/me-select.png"
+      }
+    ]
+  }
+}

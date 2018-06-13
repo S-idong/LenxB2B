@@ -1,0 +1,57 @@
+/**me.wxss**/
+@import "/css/iconfont/iconfont.wxss";
+
+.shop_information {
+  text-align: center;
+}
+
+.shop {
+  height: 200rpx;
+}
+.btn_shop{
+  width:150rpx;
+border-radius:50%;
+height:150rpx;
+border:2rpx solid #CCC;
+line-height:150rpx;
+background:none;
+margin:25rpx auto;
+
+}
+
+.avatar {
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 50rpx auto 0;
+}
+
+.list-wrap {
+  width: 100%;
+  background: #efefef;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+
+.list-item {
+  background: #fff;
+  margin-bottom: 30rpx;
+}
+
+.list-item:last-child {
+  margin: 0;
+}
+
+.item {
+  flex: 1;
+}
+
+.desc-highlight {
+  font-size: 24rpx;
+  height: 38rpx;
+  padding: 0 22rpx;
+  border: 1px solid #f5342f;
+  border-radius: 20rpx;
+  color: #f5342f;
+  line-height: 38rpx;
+}

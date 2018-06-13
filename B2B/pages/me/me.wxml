@@ -1,0 +1,22 @@
+<view class="Me">
+
+  <view class="me_content">
+    <view class="shop_information">
+      <!-- 需要使用 button 来授权登录 -->
+      <button class='btn_shop' wx:if="{{isShowGetUser}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+      <view class='shop' wx:else>
+        <wxc-avatar class="avatar" src="{{shopimg}}"></wxc-avatar>
+        <view class="name">{{shopname}}</view>
+      </view>
+    </view>
+
+    <view class="list-wrap">
+      <view class="list-item">
+        <wxc-list wx:for="{{list}}" wx:key="index" class="item" title="{{item.title}}" desc="{{item.slot? '' : item.desc}}" mode="{{index == list.length-1 ? 'none': ''}}" src="{{item.src}}">
+          <view wx:if="{{item.slot && item.desc}}" class="desc-highlight">{{item.desc}}</view>
+        </wxc-list>
+      </view>
+    </view>
+
+  </view>
+</view>

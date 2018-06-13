@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "wxc-toast": "../../dist/packages/@minui/wxc-toast/dist/index",
+    "wxc-search": "../../dist/packages/@minui/wxc-search/dist/index",
+    "wxc-icon": "../../dist/packages/@minui/wxc-icon/dist/index",
+    "wxc-flex": "../../dist/packages/@minui/wxc-flex/dist/index",
+    "wxc-cc": "../../dist/packages/@minui/wxc-cc/dist/index",
+    "wxc-loading": "../../dist/packages/@minui/wxc-loading/dist/index"
+  },
+  "navigationBarTitleText": "首页"
+}

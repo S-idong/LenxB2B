@@ -1,0 +1,31 @@
+{
+  "name": "min-ui",
+  "description": "Min 组件库示例，帮助新手快速入门的一个示例项目",
+  "version": "1.0.0",
+  "author": "lingxiao",
+  "license": "MIT",
+  "dependencies": {
+    "@minui/wxc-avatar": "^1.0.1",
+    "@minui/wxc-badge": "^1.0.1",
+    "@minui/wxc-cc": "^1.0.1",
+    "@minui/wxc-dialog": "^1.0.1",
+    "@minui/wxc-flex": "^1.0.1",
+    "@minui/wxc-icon": "^1.0.1",
+    "@minui/wxc-list": "^1.0.1",
+    "@minui/wxc-loading": "^1.0.1",
+    "@minui/wxc-mask": "^1.0.1",
+    "@minui/wxc-popup": "^1.0.1",
+    "@minui/wxc-search": "^1.0.1",
+    "@minui/wxc-toast": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-export-extensions": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "minConfig": {
+    "projectType": "component"
+  }
+}

@@ -1,0 +1,6 @@
+{"usingComponents": {
+    "wxc-search": "../../dist/packages/@minui/wxc-search/dist/index",
+    "wxc-dialog": "../../dist/packages/@minui/wxc-dialog/dist/index"
+  },
+  "navigationBarTitleText": "搜索"
+}

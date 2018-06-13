@@ -1,0 +1,27 @@
+<view class="search">
+
+  <view class="search-wrap">
+    <wxc-search class="search"
+                show-icon="{{false}}"
+                placeholder="{{placeholder}}"
+                bg-color="#fff"
+                button="搜索"
+                btn-color="#E13838"
+                focus="{{true}}"
+                bind:input="onInput"
+                bind:submit="submitForm"
+                bind:confirm="onConfirm"></wxc-search>
+  </view>
+
+  <view class='search-ad'>
+    <text wx:for="{{searchAd}}" wx:key="searchAd" data-text='{{item}}' bindtap='openProductList'>{{item}}</text>
+  </view>
+
+  <view class='search-history'>
+    <text wx:for="{{searchHistory}}" wx:key="searchHistory" data-text='{{item}}' bindtap='openProductList'>{{item}}</text>
+  </view>
+
+  <button class='clearHistroy' bindtap='clearHistroy'>清空历史记录</button>
+
+  <wxc-dialog class="wxc-dialog" title="" content="确定清空历史搜索吗？" confirm-text="确定" cancel-text="取消" bindconfirm="onHisConfirm" bindcancel="onHisCancel"></wxc-dialog>
+</view>

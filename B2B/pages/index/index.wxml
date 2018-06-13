@@ -1,0 +1,85 @@
+<scroll-view scroll-y class="container" scroll-with-animation="true" scroll-top="{{scrollTop}}" bindscroll="onContainerScroll">
+  <view class="page-body" wx:if="{{isShowDom}}">
+    <!--搜索栏-->
+    <view class="search-wrap">
+      <view class="search-box-cover" style='background:{{bgcolor}}'></view>
+      <wxc-icon class="search-icon scan" type="scan" size="44" color="{{setcolor}}" bindtap="callscan"></wxc-icon>
+      <wxc-search class="search" radius="10" bgColor="#FFF" iconColor="#7D7D7D" phColor="#7D7D7D" mode="static" placeholder="{{placeholder}}" bindtap="searchTab"></wxc-search>
+      <wxc-icon class="search-icon msg" type="message" size="44" color="{{setcolor}}"></wxc-icon>
+    </view>
+
+    <!--轮播图-->
+    <swiper class='ad-load' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="adImg">
+        <swiper-item>
+          <image src="{{item.img}}" class="slide-image" mode='aspectFill' data-url="{{item.url}}" data-name="{{item.name}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!--频道-->
+    <swiper class='pindao' bindchange="pindaoSwiperChange">
+      <swiper-item wx:for="{{pindaoList}}" wx:key="pindao">
+        <wxc-cc class="pindao-grid" wx:for="{{item}}" wx:for-item="data" wx:key="data" data-url='{{data.url}}'>
+          <view class="pindao-grid__wrapper">
+            <image class="pindao-grid__pic" src="{{data.imgurl}}" mode="aspectFit"></image>
+            <view class="pindao-grid__text">{{data.pindaoTitle}}</view>
+          </view>
+        </wxc-cc>
+      </swiper-item>
+
+    </swiper>
+
+    <view class='pindao-indicatorDots' wx:if="{{pindaoIndicatorDots}}">
+      <block wx:for="{{pindaoList}}" wx:key="pindao">
+        <i class="icon iconfont {{index == pindaoSwiperCurrent ? ' icon-tabSelect' : 'icon-tab'}}"></i>
+      </block>
+    </view>
+
+    <!--资讯-->
+    <view class='news'>
+      <view class='news-left'>B2B资讯</view>
+      <view class='news-center'>
+        <swiper class='news-swiper' autoplay="true" vertical="true" circular="true">
+          <swiper-item wx:for="{{newsList}}" wx:key="newsList">
+            <label>{{item}}</label>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class='news-right'>更多</view>
+    </view>
+
+    <!--模块-->
+    <view class='models' wx:for="{{modelsList}}" wx:key="models">
+      <view class='models-title'>{{item.modelsTitle}}</view>
+      <view class='models-pic'>
+        <image src="{{item.imgurl}}" mode='widthFix' data-url='/pages/logs/logs' bindtap="openlink"></image>
+      </view>
+    </view>
+
+    <!--货品-->
+    <view class='products' wx:for="{{productsList}}" wx:key="products">
+      <view class='products-title'>{{item.productsTitle}}</view>
+      <view class='products-grid'>
+        <view class='productdetail' wx:for="{{item.data}}" wx:for-item="data" wx:key="data">
+          <image src='{{data.imgurl}}' mode='aspectFit'></image>
+          <text>{{data.prodname}}</text>
+          <text>{{data.price1}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--回到顶部-->
+    <view id="goToTop" style="display:{{gotioTopDisplay}};" bindtap='goToTop'>
+      <a href="javascript:;">
+        <i class="icon iconfont icon-backtop"></i>
+      </a>
+    </view>
+  </view>
+
+  <!--网络连接失败View-->
+  <view wx:else>{{interError}}</view>
+
+  <wxc-toast class="J_toast" text=""></wxc-toast>
+  <wxc-loading class="J_loading" image="/images/icons/logo.png" slip="/images/icons/loadbg.png"></wxc-loading> 
+</scroll-view>
